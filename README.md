@@ -1,4 +1,4 @@
-# SOLE — Shoe Store UI/UX
+# Sam — Shoe Store UI/UX
 
 A responsive shoe-shopping storefront built with HTML, CSS, and vanilla JavaScript.
 
