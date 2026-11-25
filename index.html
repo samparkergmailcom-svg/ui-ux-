@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101b3b">
+<title>SOLE — Shoe Store</title>
+<style>
+:root{--navy:#101b3b;--yellow:#ffe17a;--red:#e5484d;--ink:#17213a;--muted:#788095;--bg:#f6f7fb;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial;color:var(--ink)}button,input{font:inherit}button{cursor:pointer;border:0}.app{max-width:1120px;margin:auto;padding:22px 24px 92px}.topbar{display:flex;align-items:center;gap:16px;justify-content:space-between}.brand{font-size:26px;font-weight:900;letter-spacing:-1.5px;color:var(--navy)}.brand span{color:var(--red)}.search{flex:1;max-width:500px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e7e9f0;border-radius:15px;padding:12px 16px}.search input{border:0;outline:0;width:100%;background:transparent}.actions{display:flex;gap:9px}.action{background:#fff;border:1px solid #e7e9f0;padding:10px 14px;border-radius:12px;color:var(--navy);font-weight:700}.action.primary{background:var(--navy);color:#fff}.hero{margin:28px 0 32px;background:var(--navy);color:#fff;border-radius:25px;padding:38px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;overflow:hidden;min-height:250px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--yellow);text-transform:uppercase}.hero h1{font-size:clamp(32px,5vw,56px);line-height:1.04;letter-spacing:-2px;margin:12px 0}.hero p{color:#d0d5e5;max-width:380px;line-height:1.6}.shopbtn{display:inline-block;margin-top:12px;background:var(--yellow);color:var(--navy);padding:13px 20px;border-radius:12px;font-weight:900}.hero-art{font-size:130px;text-align:center;transform:rotate(-18deg);filter:drop-shadow(0 20px 15px #0005)}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin:10px 0 18px}.sectionhead h2{margin:0;font-size:26px;letter-spacing:-.8px}.sectionhead small{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product{background:#fff;border:1px solid #eceef4;border-radius:19px;padding:14px;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-4px);box-shadow:0 14px 32px #18264a12}.shoe{height:150px;border-radius:14px;background:#f0f2f8;display:grid;place-items:center;font-size:76px;position:relative}.tag{position:absolute;left:10px;top:10px;background:#fff;color:var(--red);font-size:11px;font-weight:900;padding:5px 8px;border-radius:7px}.product h3{font-size:15px;margin:14px 0 5px}.category{font-size:12px;color:var(--muted)}.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:13px}.price{font-weight:900;font-size:17px}.add{background:var(--yellow);color:var(--navy);border-radius:10px;width:35px;height:35px;font-size:22px;font-weight:800}.empty{padding:28px;text-align:center;color:var(--muted);grid-column:1/-1}.profile-panel{display:none;margin:20px 0;background:white;border:1px solid #e9ebf2;border-radius:16px;padding:18px}.profile-panel.show{display:flex;justify-content:space-between;align-items:center;gap:16px}.profile-panel p{margin:4px 0;color:var(--muted);font-size:13px}.login-note{font-size:12px;color:var(--muted);margin-top:12px}.bottomnav{position:fixed;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(12px);border-top:1px solid #e9ebf2;display:flex;justify-content:center;gap:clamp(18px,7vw,72px);padding:12px 10px calc(12px + env(safe-area-inset-bottom));z-index:5}.bottomnav button{background:transparent;color:var(--muted);font-size:12px;font-weight:700;display:grid;gap:4px;justify-items:center}.bottomnav b{font-size:20px;color:var(--navy)}.toast{position:fixed;bottom:86px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 18px;border-radius:12px;display:none;z-index:8}.toast.show{display:block}.login-modal{position:fixed;inset:0;background:#0c143bcc;display:none;place-items:center;padding:20px;z-index:10}.login-modal.show{display:grid}.modal{background:#fff;border-radius:20px;padding:26px;width:min(100%,360px)}.modal h2{margin:0 0 8px}.modal input{width:100%;padding:12px;border:1px solid #e4e7ef;border-radius:10px;margin:8px 0}.modal .action{width:100%;margin-top:8px}.close{float:right;background:#f1f2f6;border-radius:8px;padding:6px 10px}
+@media(max-width:800px){.app{padding:18px 16px 100px}.topbar{flex-wrap:wrap}.brand{flex:1}.search{order:3;max-width:none;flex-basis:100%}.actions .action{padding:9px 11px}.hero{padding:25px;grid-template-columns:1fr .6fr;min-height:220px}.hero-art{font-size:90px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.shoe{height:130px;font-size:66px}}
+@media(max-width:420px){.app{padding:14px 12px 96px}.hero{padding:20px;grid-template-columns:1fr}.hero-art{display:none}.hero h1{font-size:36px}.sectionhead h2{font-size:22px}.product{padding:10px}.shoe{height:115px;font-size:58px}.bottomnav{gap:22px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Sole home">S<span>O</span>LE.</a>
+  <label class="search" aria-label="Search shoes">⌕ <input id="search" placeholder="Search sneakers, running shoes..." /></label>
+  <div class="actions"><button class="action" id="profileBtn">Profile</button><button class="action primary" id="loginBtn">Login</button></div>
+</header>
+<section class="profile-panel" id="profilePanel"><div><strong id="profileName">Guest profile</strong><p id="profileEmail">Sign in to manage your account.</p></div><button class="action" id="logoutBtn">Logout</button></section>
+<section class="hero">
+  <div><div class="eyebrow">New season • New energy</div><h1>Find your<br>perfect stride.</h1><p>Fresh kicks for every move. Discover your next everyday favorite.</p><a class="shopbtn" href="#products">Shop collection ↗</a></div>
+  <div class="hero-art" aria-hidden="true">👟</div>
+</section>
+<div class="sectionhead" id="products"><div><h2>Popular shoes</h2><small>Handpicked styles for you</small></div><small id="resultCount">4 products</small></div>
+<section class="grid" id="productGrid" aria-live="polite"></section>
+<p class="login-note">Demo interface: login uses a name and email locally in this browser. Connect a real authentication service before production.</p>
+</div>
+<nav class="bottomnav" aria-label="Main navigation"><button onclick="window.scrollTo({top:0,behavior:'smooth'})"><b>⌂</b>Home</button><button onclick="document.getElementById('search').focus()"><b>⌕</b>Search</button><button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})"><b>▦</b>Products</button><button id="navProfile"><b>♙</b>Profile</button><button id="navLogin"><b>⇥</b>Login</button></nav>
+<div class="toast" id="toast"></div>
+<div class="login-modal" id="loginModal"><div class="modal"><button class="close" id="closeModal">✕</button><h2>Welcome to SOLE</h2><p class="category">Sign in to your shopping profile</p><form id="loginForm"><input id="nameInput" placeholder="Your name" required><input id="emailInput" type="email" placeholder="Email address" required><button class="action primary" type="submit">Login</button></form></div></div>
+<script>
+const products=[
+{id:1,name:"Air Motion Runner",category:"Running shoes",price:2499,old:3499,emoji:"👟",tag:"-29%",tone:"#eef0ff"},
+{id:2,name:"Street Classic Low",category:"Casual sneakers",price:1999,old:2799,emoji:"🥾",tag:"Popular",tone:"#fff1e8"},
+{id:3,name:"Cloud Flex Sport",category:"Training shoes",price:2999,old:3999,emoji:"👟",tag:"New",tone:"#eaf8f0"},
+{id:4,name:"Urban High Top",category:"Streetwear",price:2299,old:3299,emoji:"👞",tag:"-30%",tone:"#fff3cf"}
+];
+const grid=document.getElementById("productGrid"),search=document.getElementById("search"),count=document.getElementById("resultCount"),toast=document.getElementById("toast");
+function render(){const q=search.value.toLowerCase().trim(),items=products.filter(p=>(p.name+" "+p.category).toLowerCase().includes(q));count.textContent=items.length+" products";grid.innerHTML=items.length?items.map(p=>'<article class="product"><div class="shoe" style="background:'+p.tone+'"><span class="tag">'+p.tag+'</span>'+p.emoji+'</div><h3>'+p.name+'</h3><div class="category">'+p.category+'</div><div class="price-row"><div class="price">₹'+p.price.toLocaleString("en-IN")+'<div class="category"><s>₹'+p.old.toLocaleString("en-IN")+'</s></div></div><button class="add" aria-label="Add '+p.name+' to cart" onclick="addCart('+p.id+')">+</button></div></article>').join(""):'<div class="empty">No shoes found. Try another search.</div>'}
+let cart=0;function addCart(id){cart++;showToast(products.find(p=>p.id===id).name+" added • Cart: "+cart)}
+function showToast(msg){toast.textContent=msg;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2200)}
+search.addEventListener("input",render);render();
+const modal=document.getElementById("loginModal"),panel=document.getElementById("profilePanel");
+function openLogin(){modal.classList.add("show")}function profile(){panel.classList.toggle("show")}
+document.getElementById("loginBtn").onclick=openLogin;document.getElementById("navLogin").onclick=openLogin;document.getElementById("profileBtn").onclick=profile;document.getElementById("navProfile").onclick=profile;document.getElementById("closeModal").onclick=()=>modal.classList.remove("show");
+document.getElementById("loginForm").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("nameInput").value,email=document.getElementById("emailInput").value;document.getElementById("profileName").textContent=name;document.getElementById("profileEmail").textContent=email;document.getElementById("loginBtn").textContent="Account";panel.classList.add("show");modal.classList.remove("show");showToast("Welcome, "+name+"!")});
+document.getElementById("logoutBtn").onclick=()=>{document.getElementById("profileName").textContent="Guest profile";document.getElementById("profileEmail").textContent="Sign in to manage your account.";document.getElementById("loginBtn").textContent="Login";panel.classList.remove("show");showToast("You are logged out")};
+modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("show")});
+</script>
+</body>
+</html>
